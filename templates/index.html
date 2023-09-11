@@ -1,1 +1,109 @@
-<h1>welcome to my page.</h1>
+<html>
+  <head>
+    <style>
+      .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+      }
+
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body bgcolor="#FAF1E4">
+    <div
+      style="
+        color: #435334;
+        text-align: center;
+        font-size: 64;
+        margin-top: 2em;
+        font-family: 'Times New Roman', Times, serif;
+      "
+    >
+      Academic Performance Predictor
+    </div>
+    <div
+      style="
+        color: #9eb384;
+        text-align: center;
+        font-size: 32;
+        margin-bottom: 1em;
+        font-family: 'Times New Roman', Times, serif;
+      "
+    >
+      Predict a student's mathematics score with other known features.
+    </div>
+    <hr style="width: 75%" />
+    <div
+      style="
+        color: #183d3d;
+        margin-top: 3em;
+        margin-left: 10em;
+        font-weight: bold;
+        font-size: 16;
+        font-family: monospace;
+      "
+    >
+      <div style="display: flex">
+        <div style="flex: 35%">
+          <p style="color: #5c8374">
+            The following inputs are required for predicting required result
+          </p>
+          <ol>
+            <li>Gender of Student</li>
+            <li>Race/Ethinicity of Student</li>
+            <li>Parental Level of Education</li>
+            <li>Lunch time type</li>
+            <li>Test preperation course status</li>
+            <li>Reading Score</li>
+            <li>Writing Score</li>
+          </ol>
+        </div>
+        <div style="flex: 35%">
+          <p style="color: #5c8374">
+            This project uses various regression models to train and predict
+            with the best one.
+          </p>
+          <ol>
+            <li>Gender of Student</li>
+            <li>Race/Ethinicity of Student</li>
+            <li>Parental Level of Education</li>
+            <li>Lunch time type</li>
+            <li>Test preperation course status</li>
+            <li>Reading Score</li>
+            <li>Writing Score</li>
+          </ol>
+        </div>
+        <div style="flex: 30%">
+          <img
+            src="{{url_for('static', filename='abc.jpg')}}"
+            width="200px"
+            height="200px"
+          />
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin: 50px">
+      <form action="{{ url_for('predict_datapoint')}}" method="get">
+        <button class="button" type="submit">Go to Predictor</button>
+      </form>
+    </div>
+  </body>
+</html>
