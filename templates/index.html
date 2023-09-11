@@ -1,6 +1,28 @@
 <html>
   <head>
     <style>
+      .title {
+        color: #435334;
+        text-align: center;
+        font-size: 64;
+        margin-top: 2em;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .sub-title {
+        color: #9eb384;
+        text-align: center;
+        font-size: 32;
+        margin-bottom: 1em;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .cont {
+        color: #183d3d;
+        margin-top: 3em;
+        margin-left: 10em;
+        font-weight: bold;
+        font-size: 16;
+        font-family: monospace;
+      }
       .button {
         display: inline-block;
         padding: 15px 25px;
@@ -28,39 +50,12 @@
     </style>
   </head>
   <body bgcolor="#FAF1E4">
-    <div
-      style="
-        color: #435334;
-        text-align: center;
-        font-size: 64;
-        margin-top: 2em;
-        font-family: 'Times New Roman', Times, serif;
-      "
-    >
-      Academic Performance Predictor
-    </div>
-    <div
-      style="
-        color: #9eb384;
-        text-align: center;
-        font-size: 32;
-        margin-bottom: 1em;
-        font-family: 'Times New Roman', Times, serif;
-      "
-    >
+    <div class="title">Academic Performance Predictor</div>
+    <div class="sub-title">
       Predict a student's mathematics score with other known features.
     </div>
     <hr style="width: 75%" />
-    <div
-      style="
-        color: #183d3d;
-        margin-top: 3em;
-        margin-left: 10em;
-        font-weight: bold;
-        font-size: 16;
-        font-family: monospace;
-      "
-    >
+    <div class="cont">
       <div style="display: flex">
         <div style="flex: 35%">
           <p style="color: #5c8374">
@@ -78,17 +73,17 @@
         </div>
         <div style="flex: 35%">
           <p style="color: #5c8374">
-            This project uses various regression models to train and predict
-            with the best one.
+            Following are the regressor models trained and validated for the
+            best.
           </p>
           <ol>
-            <li>Gender of Student</li>
-            <li>Race/Ethinicity of Student</li>
-            <li>Parental Level of Education</li>
-            <li>Lunch time type</li>
-            <li>Test preperation course status</li>
-            <li>Reading Score</li>
-            <li>Writing Score</li>
+            <li>Random Forest</li>
+            <li>Decision Tree</li>
+            <li>Gradient Boosting</li>
+            <li>Linear Regression</li>
+            <li>XGBRegressor</li>
+            <li>CatBoosting Regressor</li>
+            <li>AdaBoost Regressor</li>
           </ol>
         </div>
         <div style="flex: 30%">
